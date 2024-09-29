@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Human extends Model
+class Human
 {
     protected object $_head;
     protected object $_body;
@@ -13,5 +13,10 @@ class Human extends Model
     {
         $this->_head = new Head();
         $this->_body = new Body();
+    }
+
+    public function _get()
+    {
+        return $this;
     }
 }

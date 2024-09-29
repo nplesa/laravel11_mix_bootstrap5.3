@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Head extends Model
+class Head
 {
     protected object $_leftEye;
     protected object $_rightEye;
@@ -15,7 +15,7 @@ class Head extends Model
     protected object $_moustache;
     protected object $_hair;
     protected object $_mouth;
-    protected object $_headForm;
+    protected object $_form;
     public function __construct()
     {
         $this->_hair = new Hair();
@@ -26,6 +26,6 @@ class Head extends Model
         $this->_nose = new Nose();
         $this->_moustache = new Mustache();
         $this->_mouth   = new Mouth();
-        $this->_headForm = new HeadForm();
+        $this->_form = new HeadForm();
     }
 }

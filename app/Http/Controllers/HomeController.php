@@ -25,7 +25,7 @@ class HomeController extends Controller
     public function index()
     {
         $human = new Human();
-        dd($human);
+        dd($human->_get());
         return view('home');
     }
 }
