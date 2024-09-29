@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Human;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,6 +24,8 @@ class HomeController extends Controller
      */
     public function index()
     {
+        $human = new Human();
+        dd($human);
         return view('home');
     }
 }
